@@ -4,6 +4,7 @@ import os
 import datetime
 
 MOVIE_TITLE = "The Rajasaab"
+MOVIE_TITLE_HASHTAG = MOVIE_TITLE.replace(" ", "")
 RELEASE_DATE = datetime.date(2025, 12, 5)
 
 def get_client():
@@ -27,7 +28,7 @@ def create_tweet_text():
     days_left = calculate_days_left()
     
     if days_left > 0:
-        return f"Only {days_left} days left until {MOVIE_TITLE}!\n#{MOVIE_TITLE} #Prabhas #Tollywood"
+        return f"Only {days_left} days left until {MOVIE_TITLE}!\n#{MOVIE_TITLE_HASHTAG} #Prabhas #Tollywood"
     elif days_left == 0:
         return f"It's here! {MOVIE_TITLE} is out today!\n#{MOVIE_TITLE} #Prabhas #Tollywood"
     else:
